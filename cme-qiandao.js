@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         CME 自动签到助手（可配置）
+// @name         CME 自动签到助手（带配置+提示）
 // @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  缩短签到时间并自动完成签到，不影响视频学习进度，带页面配置面板
+// @version      1.2
+// @description  缩短签到时间并自动完成签到，不影响视频学习进度，带配置面板和提示回显
 // @author       You
 // @match        *://*.haoyisheng.com/*
 // @grant        none
@@ -26,6 +26,25 @@
     // 保存配置
     function saveConfig() {
         localStorage.setItem("cme_autosign_config", JSON.stringify(config));
+    }
+
+    // 显示提示条
+    function showToast(msg, color="#4caf50") {
+        const toast = document.createElement("div");
+        toast.innerText = msg;
+        toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${color};
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 999999;
+            font-size: 14px;
+        `;
+        document.body.appendChild(toast);
+        setTimeout(()=>toast.remove(), 3000);
     }
 
     // 创建配置面板
@@ -52,6 +71,7 @@
               自动签到: <input type="checkbox" id="autoSignInput" ${config.autoSign ? "checked" : ""}>
             </div>
             <button id="saveConfigBtn" style="margin-top:8px;">保存</button>
+            <button id="testSignBtn" style="margin-top:8px;">立即触发签到</button>
         `;
         document.body.appendChild(panel);
 
@@ -59,7 +79,11 @@
             config.pauseSecond = parseInt(document.getElementById("pauseSecondInput").value) || 30;
             config.autoSign = document.getElementById("autoSignInput").checked;
             saveConfig();
-            alert("配置已保存，刷新页面后生效");
+            showToast("配置已保存 ✅");
+        };
+
+        document.getElementById("testSignBtn").onclick = () => {
+            autoSign();
         };
     }
 
@@ -71,13 +95,14 @@
             // 调用原有签到完成逻辑
             if (typeof window.readComplete === "function") {
                 window.readComplete();
-                console.log("✅ 已自动调用 readComplete()");
+                showToast("已自动签到 ✅");
             } else if (window.cc_js_Player && typeof window.cc_js_Player.play === "function") {
                 window.cc_js_Player.play();
-                console.log("✅ 直接恢复播放");
+                showToast("已恢复播放 ✅");
             }
         } catch (e) {
             console.error("自动签到失败:", e);
+            showToast("自动签到失败 ❌","#f44336");
         }
     }
 
@@ -92,7 +117,7 @@
                     if (config.autoSign) {
                         autoSign();
                     } else {
-                        console.log("⚠️ 已到签到点，请手动点击签到");
+                        showToast("已到签到点，请手动签到 ⚠️","#ff9800");
                     }
                 }
             }
