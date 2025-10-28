@@ -42,6 +42,8 @@
 // @run-at        document-end
 // @grant         unsafeWindow
 // @grant         GM_getResourceText
+// @downloadURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper.js
+// @updateURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper.js
 // ==/UserScript==
 
 (function () {
