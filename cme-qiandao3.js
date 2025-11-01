@@ -1,10 +1,27 @@
 // ==UserScript==
 // @name         CME 自动签到助手（带配置+提示）
-// @namespace    http://tampermonkey.net/
+// @namespace    https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-qiandao3.js
 // @version      1.2
 // @description  缩短签到时间并自动完成签到，不影响视频学习进度，带配置面板和提示回显
 // @author       You
 // @match        *://*.haoyisheng.com/*
+// @match         *://bjsqypx.haoyisheng.com/cme/study2.jsp*
+// @match         *://bjsqypx.haoyisheng.com/cme/exam.jsp*
+// @match         *://cme.haoyisheng.com/cme/polyv.jsp*
+// @match         *://cme.haoyisheng.com/cme/study2.jsp*
+// @match         *://cme.haoyisheng.com/cme/exam.jsp*
+// @match         *://cme.haoyisheng.com/cme/examQuizFail.jsp*
+// @match         *://bjsqypx.haoyisheng.com/qypx/bj/polyv.jsp*
+// @match         *://bjsqypx.haoyisheng.com/qypx/bj/cc.jsp*
+// @match         *://bjsqypx.haoyisheng.com/qypx/bj/exam.jsp*
+// @match         *://bjsqypx.haoyisheng.com/qypx/bj/examQuizFail.jsp*
+// @match         *://*.cmechina.net/cme/polyv.jsp*
+// @match         *://*.cmechina.net/cme/study2.jsp*
+// @match         *://*.cmechina.net/cme/exam.jsp*
+// @match         *://*.cmechina.net/cme/examQuizFail.jsp*
+// @match         *://bjsqypx.haoyisheng.com/cme/*
+// @match         *://cme.haoyisheng.com/cme/*
+// @match         *://*.cmechina.net/cme/*
 // @grant        none
 // @downloadURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-qiandao3.js
 // @updateURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-qiandao3.js
