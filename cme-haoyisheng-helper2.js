@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          好医生-视频一键到底与自动答题（琅少修正版）
-// @namespace     https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper.js
+// @namespace     https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper2.js
 // @version       1.7.4
 // @description   CME平台视频倍速、一键看完、考试一键完成。考试页按钮固定右上角，强制新窗口遍历答案直到正确。
 // @author        limkim & langshao
