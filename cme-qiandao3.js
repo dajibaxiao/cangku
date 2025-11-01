@@ -6,6 +6,8 @@
 // @author       You
 // @match        *://*.haoyisheng.com/*
 // @grant        none
+// @downloadURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-qiandao3.js
+// @updateURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-qiandao3.js
 // ==/UserScript==
 
 (function() {
@@ -13,8 +15,8 @@
 
     // 默认配置
     let config = {
-        pauseSecond: 30,   // 默认 30 秒触发签到
-        autoSign: true     // 默认自动签到
+        pauseSecond: 30, // 默认 30 秒触发签到
+        autoSign: true // 默认自动签到
     };
 
     // 从 localStorage 读取配置
@@ -91,7 +93,7 @@
     function autoSign() {
         try {
             // 隐藏弹窗
-            document.querySelectorAll(".mark,.xywarp").forEach(el => el.style.display="none");
+            document.querySelectorAll(".mark,.xywarp").forEach(el => {el.style.display="none"});
             // 调用原有签到完成逻辑
             if (typeof window.readComplete === "function") {
                 window.readComplete();
