@@ -145,15 +145,19 @@
             });
             autoSelectAnswer(answersArray);
 
-            const form = document.forms['form1'];
-            if (form) {
-                form.setAttribute('target','_blank');
-                if (typeof unsafeWindow.doSubmit === 'function') {
-                    unsafeWindow.doSubmit();
-                } else {
-                    form.submit();
-                }
-            }
+// 更通用的写法，兼容 name="form1" 或 id="form1"
+const form = document.querySelector('form[name="form1"], form#form1');
+if (form) {
+    form.setAttribute('target','_blank');
+    if (typeof unsafeWindow.doSubmit === 'function') {
+        unsafeWindow.doSubmit();
+    } else {
+        form.submit();
+    }
+} else {
+    console.warn("未找到 form1 表单，可能页面结构不同");
+}
+
         });
 
         // 直接挂到 body，保证显示
