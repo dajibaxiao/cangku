@@ -3,6 +3,7 @@
 // @namespace     https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper2.js
 // @version       1.7.4
 // @description   CME平台视频倍速、一键看完、考试一键完成。考试页按钮固定右上角，强制新窗口遍历答案直到正确。
+// @icon        https://cdn.iconscout.com/icon/premium/png-256-thumb/star-icon-svg-download-png-8288801.png
 // @author        limkim & langshao
 // @license MIT
 // @require       https://unpkg.com/sweetalert2@11/dist/sweetalert2.min.js
@@ -42,8 +43,8 @@
 // @run-at        document-end
 // @grant         unsafeWindow
 // @grant         GM_getResourceText
-// @downloadURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper.js
-// @updateURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper.js
+// @downloadURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper2.js
+// @updateURL https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper2.js
 // ==/UserScript==
 
 (function () {
