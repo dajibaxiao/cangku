@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name          好医生-视频一键到底与自动答题
-// @namespace     https://github.com/lim-kim930/cme-haoyisheng-helper
+// @namespace     https://github.com/dajibaxiao/cangku
 // @version       1.6.4
 // @description   提供好医生CME继续医学教育平台的视频倍速与一键看完, 并且支持考试一键完成, 现已支持: 北京健康在线-好医生继续医学教育(包含河北地区)、北京市继续医学教育必修课培训2024(北京市全员必修课培训)
-// @author        limkim
+// @author        limkim &langshao
 // @license MIT
 // @require       https://unpkg.com/sweetalert2@11/dist/sweetalert2.min.js
 // @resource Swal https://unpkg.com/sweetalert2@11/dist/sweetalert2.min.css
@@ -21,7 +21,7 @@
 // @match         *://*.cmechina.net/cme/study2.jsp*
 // @match         *://*.cmechina.net/cme/exam.jsp*
 // @match         *://*.cmechina.net/cme/examQuizFail.jsp*
-// @icon          https://raw.githubusercontent.com/lim-kim930/cme-haoyisheng-helper/main/favicon.ico
+// @icon          https://cdn.iconscout.com/icon/premium/png-256-thumb/star-icon-svg-download-png-8288801.png
 // @run-at        document-end
 // @grant         unsafeWindow
 // @grant         GM_addStyle
@@ -33,8 +33,8 @@
 // @grant         GM_notification
 // @grant         GM_xmlhttpRequest
 // @grant         GM_getResourceText
-// @downloadURL https://update.greasyfork.org/scripts/452555/%E5%A5%BD%E5%8C%BB%E7%94%9F-%E8%A7%86%E9%A2%91%E4%B8%80%E9%94%AE%E5%88%B0%E5%BA%95%E4%B8%8E%E8%87%AA%E5%8A%A8%E7%AD%94%E9%A2%98.user.js
-// @updateURL https://update.greasyfork.org/scripts/452555/%E5%A5%BD%E5%8C%BB%E7%94%9F-%E8%A7%86%E9%A2%91%E4%B8%80%E9%94%AE%E5%88%B0%E5%BA%95%E4%B8%8E%E8%87%AA%E5%8A%A8%E7%AD%94%E9%A2%98.meta.js
+// @downloadURL   https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper1.js
+// @updateURL     https://raw.githubusercontent.com/dajibaxiao/cangku/refs/heads/main/cme-haoyisheng-helper1.js
 // ==/UserScript==
 
 (function () {
