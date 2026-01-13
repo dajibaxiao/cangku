@@ -22,7 +22,6 @@
 // @match         *://*.cmechina.net/cme/study2.jsp*
 // @match         *://*.cmechina.net/cme/exam.jsp*
 // @match         *://*.cmechina.net/cme/examQuizFail.jsp*
-// @icon          https://raw.githubusercontent.com/lim-kim930/cme-haoyisheng-helper/main/favicon.ico
 // @run-at        document-end
 // @grant         unsafeWindow
 // @grant         GM_addStyle
@@ -39,7 +38,6 @@
 // @match         *://bjsqypx.haoyisheng.com/cme/*
 // @match         *://cme.haoyisheng.com/cme/*
 // @match         *://*.cmechina.net/cme/*
-// @icon          https://raw.githubusercontent.com/lim-kim930/cme-haoyisheng-helper/main/favicon.ico
 // @run-at        document-end
 // @grant         unsafeWindow
 // @grant         GM_getResourceText
